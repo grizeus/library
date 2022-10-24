@@ -5,8 +5,9 @@ int main(int c)
      {
            if (isdigit(c[i]))
                 continue;
-           else
-                return 0;
-}
+     }
+    else
+            return 0;
+
      return 1;
 }
