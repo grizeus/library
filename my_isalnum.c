@@ -1,4 +1,4 @@
-int main(int c)
+int my_isalnum(int c)
 {
      length = strlen(c);
      for (int i = 0; i < length; i++)

@@ -1,4 +1,4 @@
-int main(int c)
+int my_isalpha(int c)
 {
      unsighned char uc = c;
      if (uc >= ‘a’ && uc <= ‘z’ || uc >= ‘A’ && uc <= ‘Z’)
