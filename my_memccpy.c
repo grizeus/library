@@ -10,5 +10,8 @@ void *my_memccpy(void *dest, const void *src, int c, size_t n)
         return NULL;
     }
     if (*tmp == uc)
+    {   
+        ++*tmp;
         return *tmp;
+    }
 }
