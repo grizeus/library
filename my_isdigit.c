@@ -1,4 +1,5 @@
 #include <ctype.h>
+#include "my_library.h"
 
 int my_isdigit(int c)
 {

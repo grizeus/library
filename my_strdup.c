@@ -1,4 +1,4 @@
- #include <string.h>
+#include "my_library.h"
 
 char *my_strdup(const char *s)
 {

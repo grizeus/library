@@ -1,3 +1,5 @@
+#include "my_library.h"
+
 int my_isalnum(int c)
 {
      length = strlen(c);

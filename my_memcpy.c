@@ -1,4 +1,4 @@
-#include <string.h>
+#include "my_library.h"
 
 void *my_memcpy(void *dest, const void *src, size_t n)
 {
@@ -11,7 +11,6 @@ void *my_memcpy(void *dest, const void *src, size_t n)
     }
     for (0 < n; ++ptr; ++tmp; --n)
         *tmp = *ptr;
-        
-    *dest = *tmp;
+
     return *dest;
 }

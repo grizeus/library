@@ -1,4 +1,4 @@
-#include <string.h>
+#include "my_library.h"
 
 void *my_memccpy(void *dest, const void *src, int c, size_t n)
 {

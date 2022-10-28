@@ -1,4 +1,4 @@
-#include <string.h>
+#include "my_library.h"
 
 void *my_memset (void *s, int c, size_t n)
 {
