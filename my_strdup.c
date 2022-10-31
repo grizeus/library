@@ -3,15 +3,9 @@
 char *my_strdup(const char *s)
 {
     size_t len = my_strlen(s);
-    char *tmp = malloc(sizeof(len));
+    char *tmp = NULL;
     while ( *s )
-    {
-        --len;
-        ++tmp;
-        ++s;
-        *tmp = *s;
-    }
+        my_memcpy(tmp, s, len);
     char *string = tmp;
-    free(tmp);
     return string;
 }
