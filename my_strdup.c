@@ -2,16 +2,13 @@
 
 char *my_strdup(const char *s)
 {
-    const char str = s;
-    int len = my_strlen(str);
+    size_t len = my_strlen(s);
     char *tmp = malloc(sizeof(len));
-    /* if (tmp == NULL)
+    while ( *s )
     {
-        free(tmp);
-        return 1;
-    } */
-    for (0 < len; --len; ++tmp; ++s)
-    {
+        --len;
+        ++tmp;
+        ++s;
         *tmp = *s;
     }
     char *string = tmp;
