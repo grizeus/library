@@ -2,18 +2,17 @@
 
 void *my_memcpy(void *dest, const void *src, size_t n)
 {
-    unsigned char *tmp = dest;
+    char *tmp = dest;
     const char *ptr = src;
-    *tmp = malloc(sizeof(n));
-    while ( *ptr )
+    long int len = n;
+    while (len > 0)
     {
-        --n;
+        --len;
         ++tmp;
-        ++s;
+        ++ptr;
         *tmp = *ptr;
     }
 
     dest = tmp;
-    free(tmp);
-    return *dest;
+    return dest;
 }

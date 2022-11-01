@@ -2,15 +2,14 @@
 
 void *my_memchr(const void *s, int c, size_t n)
 {
-    unsigned char uc = c;
-    unsigned char *string = s;
-    
-    for (n > 0; --n; ++string)
-    {
-        if (string != uc)
-            continue;
-            return NULL;
-        else if (string == uc)
-            return string;
+    const char *ptr = s;
+    long int len = n;
+    while (len > 0)
+    {   
+        --len;
+        ++ptr;
+        if (*ptr == c)
+            return (void *) ptr;
     }
+    return NULL;
 }
