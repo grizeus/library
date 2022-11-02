@@ -15,3 +15,6 @@ void *my_memchr(const void *s, int c, size_t n);
 int my_memcmp(const void *s1, const void *s2, size_t n);
 char *my_strdup(const char *s);
 char *my_strcpy(char *dest, const char *src);
+int my_atoi(const char *nptr);
+int my_isascii(int c);
+char *my_strncpy(char *dest, const char *src, size_t n);

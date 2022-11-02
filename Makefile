@@ -11,7 +11,9 @@ FILES		= my_bzero.c \
 				my_memmove.c \
 				my_memset.c \
 				my_strdup.c \
-				my_strlen.c
+				my_strlen.c \
+				my_atoi.c \
+				my_isascii.c \
 
 OBJ			= $(FILES:%.c=%.o)
 
