@@ -16,6 +16,8 @@ FILES		= my_bzero.c \
 				my_isascii.c \
 				my_strcat.c \
 				my_strncat.c \
+				my_strchr.c \
+				my_strrchr.c \
 
 OBJ			= $(FILES:%.c=%.o)
 

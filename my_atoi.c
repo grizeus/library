@@ -7,7 +7,7 @@ int my_atoi(const char *nptr)
     int len = my_strlen(nptr);
     for (int i = 0; i < len; i++)
     {
-        if (my_isdigit(nptr[i]))
+        if (my_isdigit(nptr[i]) == 1)
             ptr[i] = nptr[i];
         else
             break;
