@@ -2,12 +2,12 @@
 
 char *my_strrchr(const char *s, int c)
 {
-    char *ptr = s;
+    const char *ptr = s;
     size_t len = my_strlen(s);
-    for (0 <= len; --len)
+    for (size_t i = 0; len > i; len--)
     {
-        if (ptr[i] == c)
-            return ptr - s;
+        if (ptr[len] == c)
+            return (void *) ptr;
     }
     return NULL;
 }

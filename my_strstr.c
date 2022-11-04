@@ -2,24 +2,24 @@
 
 char *my_strstr(const char *haystack, const char *needle)
 {
-    char *str, *sub;
+    register char *str, *sub;
 
-    subb = needle;
+    sub = (void *) needle;
     if (*sub == 0)
-        return haystack;
-    for ( ; *haystack = != 0; haystack += 1)
+        return (void *) haystack;
+    for ( ; *haystack != 0; haystack++)
     {
-        if (*haystack != *subb)
+        if (*haystack != *sub)
             continue;
-        str = haystack;
+        str = (void *) haystack;
         while (1) // infinite loop;
         {
             if (*sub == 0)
-                return haystack;
-            if (*a++ != *b++)
+                return (void *) haystack;
+            if (*str++ != *sub++)
                 break;
         }   
-        sub = needle;
+        sub = (void *) needle;
     }
     return NULL;
 }
