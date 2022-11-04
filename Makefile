@@ -18,6 +18,7 @@ FILES		= my_bzero.c \
 				my_strncat.c \
 				my_strchr.c \
 				my_strrchr.c \
+				my_strstr.c \
 
 OBJ			= $(FILES:%.c=%.o)
 
