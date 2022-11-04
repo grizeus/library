@@ -21,7 +21,7 @@ FILES		= my_bzero.c \
 				my_strrchr.c \
 				my_strstr.c \
 				my_strcmp.c \
-				
+				my_strncmp.c \
 
 OBJ			= $(FILES:%.c=%.o)
 
