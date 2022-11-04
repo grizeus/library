@@ -25,3 +25,5 @@ char *my_strchr(const char *s, int c);
 char *my_strrchr(const char *s, int c);
 char *my_strstr(const char *haystack, const char *needle);
 char *my_strnstr(const char *s1, const char *s2, size_t n);
+int my_strcmp(const char *s1, const char *s2);
+int my_strncmp(const char *s1, const char *s2, size_t n);

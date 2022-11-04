@@ -20,6 +20,8 @@ FILES		= my_bzero.c \
 				my_strchr.c \
 				my_strrchr.c \
 				my_strstr.c \
+				my_strcmp.c \
+				
 
 OBJ			= $(FILES:%.c=%.o)
 
