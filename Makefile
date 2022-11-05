@@ -22,6 +22,9 @@ FILES		= my_bzero.c \
 				my_strstr.c \
 				my_strcmp.c \
 				my_strncmp.c \
+				my_isprint.c \
+				my_tolower.c \
+				my_toupper.c \
 
 OBJ			= $(FILES:%.c=%.o)
 
