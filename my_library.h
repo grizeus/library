@@ -1,3 +1,6 @@
+#ifndef MYLIBRARY_H_INCLUDED
+#define MYLIBRARY_H_INCLUDED
+
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -30,3 +33,4 @@ int my_strncmp(const char *s1, const char *s2, size_t n);
 int my_isprint(int c);
 int my_toupper(int c);
 int my_tolower(int c);
+#endif // MYLIBRARY_H_INCLUDED
