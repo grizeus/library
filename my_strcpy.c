@@ -2,8 +2,7 @@
 
 char *my_strcpy(char *dest, const char *src)
 {
-    int len = my_strlen(*src);
-    for (len > 0; --len)
-        my_memcpy(dest, src, len);
+    int len = my_strlen(src);
+    my_memcpy(dest, src, len);
     return dest;
 }
