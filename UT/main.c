@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include <my_library.h>
+#include "../my_library.h"
 
 int main(void)
 {
