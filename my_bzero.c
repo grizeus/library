@@ -2,12 +2,5 @@
 
 void my_bzero(void *s, size_t n)
 {
-    unsigned char *uc = s;
-    int32_t len = n;
-    while ( *uc )
-    {
-        ++*uc;
-        --len;
-        *uc = 0;
-    }
+     my_memset (s, '\0', n);
 }

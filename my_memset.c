@@ -3,12 +3,11 @@
 void *my_memset (void *s, int c, size_t n)
 {
     unsigned char *unsigned_s = s;
-    unsigned char unsigned_c = c;
     while (0 < n)
     {
-        *unsigned_s += 1;
-        n -= 1;
-        *unsigned_s = unsigned_c;
+        *unsigned_s = c;
+        unsigned_s++;
+        n--;
     }
-    return s;
+    return (s);
 }

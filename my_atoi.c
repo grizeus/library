@@ -2,7 +2,7 @@
 
 int my_atoi(const char *nptr)
 {
-    int res = 0, sign = 1, INT_MAX = 214783647, INT_MIN = -2147483648;
+    int res = 0, sign = 1, INT_MAX = +214783647, INT_MIN = -2147483648;
     
     if (*nptr == '\0'){
         return 0;
@@ -12,11 +12,8 @@ int my_atoi(const char *nptr)
         sign = -1;
         nptr++;
     }
-    if (*nptr == '\t'){
-        nptr++;
-    }
 
-    while (*nptr == ' ')
+    while (*nptr == ' ' || *nptr == '\t')
         nptr++;
     
     while (my_isdigit(*nptr) == 1){
