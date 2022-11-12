@@ -1,11 +1,9 @@
 #include "my_library.h"
 
-char* my_strnew(size_t size)
-{
-    char* string = malloc(size * sizeof(char));
+char* my_strnew(size_t size){
+    char* string = my_memalloc(size * sizeof(char) + 1);
     if (string == NULL)
         return NULL;
-    my_bzero(string, size);
     return string;
 }
         
