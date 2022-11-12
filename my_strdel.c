@@ -1,10 +1,10 @@
 #include "my_library.h"
 
-void my_strdel(char **as)
-{
-    char* tmp = (char*) as;
-    free(*as);
-    tmp == NULL;
+void my_strdel(char **as){
+    if (*as && as){
+        free(*as);
+        *as = NULL;
+    }
 }
 
 
