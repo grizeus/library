@@ -1,16 +1,12 @@
 #include "my_library.h"
 
-void my_striter(char *s, void (*f)(char*))
-{
-    size_t len = my_strlen(s);
-    for (size_t i = 0; i < len; i++)
-        if (s[i] != '\0')
-        {
-            char *tmp = NULL;
-            tmp = f(&s[i]);
-            if (tmp != NULL)
-                s[i] = *tmp;
-        }
+void my_striter(char *s, void (*f)(char*)){
+    if (s && f){
+        while (*s){
+            (*f)(s)
+            ++s;
+        } 
+    }  
 }
         
         
