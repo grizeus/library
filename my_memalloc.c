@@ -2,9 +2,9 @@
 
 void* my_memalloc(size_t size)
 {
-    unsigned char *ptr = malloc(size * sizeof(char));
+    unsigned char *ptr = malloc(size);
     if (ptr == NULL)
-        return NULL;
+        return (NULL);
     my_bzero(ptr, size);
-    return ptr;
+    return ((void *)ptr);
 }
