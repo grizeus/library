@@ -1,10 +1,7 @@
 #include "my_library.h"
 
 void my_strdel(char **as){
-    if (*as && as){
-        free(*as);
-        *as = NULL;
-    }
+    my_memdel((char)as);
 }
 
 
