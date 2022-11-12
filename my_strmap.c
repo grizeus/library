@@ -4,10 +4,11 @@ char* my_strmap(char const *s, char (*f)(char)){
     if (!s || !f)
 		return (NULL);
     size_t len = my_strlen(s);
-    if (char* map_string = my_strnew(len)) == 0
+    char* map_string;
+    if (map_string = my_strnew(len) == 0)
         return NULL;
     map_string = my_striter(s, f);
-    return NULL;
+    return map_string;
 }
 
 
