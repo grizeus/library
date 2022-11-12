@@ -1,10 +1,13 @@
 #include "my_library.h"
 
-void my_striteri(char *s, void (*f)(unsigned int, char*))
-{
-    unsigned int len = my_strlen(s);
-    for (unsigned int i = 0; i < len; i++)
-        if (s[i] != '\0') ? s[i] = f(i, s[i]) : ;
+void my_striteri(char *s, void (*f)(unsigned int, char*)){
+    int i = 0;
+    if (s && f){
+        while (s[i]){
+            (*f)(i, (s + i))
+            ++s;
+        } 
+    }  
 }
 
 
