@@ -33,4 +33,16 @@ int my_strncmp(const char *s1, const char *s2, size_t n);
 int my_isprint(int c);
 int my_toupper(int c);
 int my_tolower(int c);
+void* my_memalloc(size_t size);
+void my_memdel(void **ap);
+char* my_strnew(size_t size);
+void my_strdel(char **as);
+void my_strclr(char *s);
+void my_striter(char *s, void (*f)(char*));
+void my_striteri(char *s, void (*f)(unsigned int, char*));
+char* my_strmap(char const *s, char (*f)(char));
+int my_strequ(char const *s1, char const *s2);
+int my_strnequ(char const *s1, char const *s2, size_t n);
+char* my_strsub(char const *s, unsigned int start, size_t len);
+char* my_strtrim(char const *s);
 #endif // MYLIBRARY_H_INCLUDED

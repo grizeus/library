@@ -7,12 +7,11 @@ char* my_strmap(char const *s, char (*f)(char)){
     char* map_string;
     if ((map_string = my_strnew(len)) == 0)
         return NULL;
-    map_string = my_striter(s, f);
+    for (size_t i = 0; i < len; i++)
+      map_string[i] = (*f)(s[i]);
+    
     return map_string;
 }
-
-
-
 
 
 

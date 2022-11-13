@@ -15,8 +15,8 @@ int my_strequ(char const *s1, char const *s2){
 
 
 
-Lexicographical comparison between s1 and s2. If the 2 strings are identical function returns 1, 
+/* Lexicographical comparison between s1 and s2. If the 2 strings are identical function returns 1, 
 or 0 otherwise.
 Param#1     The first string
 Param#2     The second string.
-Return val  1 or 0 according to if the 2 strings are identical or not.
+Return val  1 or 0 according to if the 2 strings are identical or not. */
