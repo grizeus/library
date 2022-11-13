@@ -6,8 +6,7 @@ int my_strequ(char const *s1, char const *s2){
     size_t len_1 = my_strlen(s1);
     if (len_1 != my_strlen(s2))
         return 0;
-    for (size_t i = 0; i < len_1; i++)
-    {
+    for (size_t i = 0; i < len_1; i++){
         if (s1[i] != s2[i])
             return 0;
     }
