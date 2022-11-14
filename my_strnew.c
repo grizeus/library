@@ -1,7 +1,7 @@
 #include "my_library.h"
 
 char* my_strnew(size_t size){
-    char* string = my_memalloc(size * sizeof(char) + 1);
+    char* string = my_memalloc((size + 1) * sizeof(char));
     if (string == NULL)
         return NULL;
     return string;

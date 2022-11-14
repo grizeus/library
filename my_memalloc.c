@@ -6,5 +6,5 @@ void* my_memalloc(size_t size)
     if (ptr == NULL)
         return (NULL);
     my_bzero(ptr, size);
-    return ((void *)ptr);
+    return ptr;
 }

@@ -6,10 +6,10 @@ void *my_memchr(const void *s, int c, size_t n)
     long int len = n;
     while (len > 0)
     {   
-        --len;
-        ++ptr;
         if (*ptr == c)
             return (void *) ptr;
+        --len;
+        ++ptr;
     }
     return NULL;
 }

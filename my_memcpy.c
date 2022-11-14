@@ -7,10 +7,10 @@ void *my_memcpy(void *dest, const void *src, size_t n)
     long int len = n;
     while (len > 0)
     {
+        *tmp = *ptr;
         --len;
         ++tmp;
         ++ptr;
-        *tmp = *ptr;
     }
 
     dest = tmp;

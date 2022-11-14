@@ -9,7 +9,7 @@ int my_strcmp(const char *s1, const char *s2)
         uc1 = (unsigned char) *ptr1++;
         uc2 = (unsigned char) *ptr2++;
         if (uc1 == '\0')
-	    return uc1 - uc2;
+	        return uc1 - uc2;
     }   while (uc1 == uc2);
 
     return uc1 - uc2;    

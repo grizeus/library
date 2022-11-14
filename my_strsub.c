@@ -4,7 +4,7 @@ char* my_strsub(char const *s, unsigned int start, size_t len){
     if (s == 0)
         return NULL;
     char *sub;
-    if (sub = my_strnew(len) == 0)
+    if ((sub = my_strnew(len)) == 0)
         return NULL;
     for (size_t i = 0; i < len; i++){
         sub[i] = s[start];
