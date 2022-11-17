@@ -30,7 +30,13 @@ int main(void)
     TEST(atoi("\t133") == my_atoi("\t133"));
     TEST(atoi("10000000000000000000000000") == my_atoi("10000000000000000000000000"));
     printf("ATOI tests\n");
-    
+    {
+    char* kek = my_memalloc(10);
+        const char* lol = "12345555567";
+        my_memccpy(kek, lol, '5', 10);
+        printf("%s\n", kek);
+
+    }
     if (!failed)    return 0;
     abort();
 }
