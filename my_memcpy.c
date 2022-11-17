@@ -2,17 +2,10 @@
 
 void *my_memcpy(void *dest, const void *src, size_t n)
 {
-    char *tmp = dest;
-    const char *ptr = src;
-    long int len = n;
-    while (len > 0)
-    {
-        --len;
-        ++tmp;
-        ++ptr;
-        *tmp = *ptr;
+    unsigned char* dest1 = (unsigned char *) dest;
+    unsigned char* src1 = (unsigned char*) src;
+    for (size_t i = 0; i < n; i++){
+        dest1[i] = src1[i];
     }
-
-    dest = tmp;
-    return dest;
+    return dest1;
 }

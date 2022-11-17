@@ -8,13 +8,15 @@ int my_atoi(const char *nptr)
         return 0;
     }
 
+    while (*nptr == ' ' || *nptr == '\t')
+        nptr++;
+        
     if (*nptr == '-'){
         sign = -1;
         nptr++;
     }
 
-    while (*nptr == ' ' || *nptr == '\t')
-        nptr++;
+    
     
     while (my_isdigit(*nptr) == 1){
         if (res > INT_MAX / 10)

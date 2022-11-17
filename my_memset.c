@@ -2,12 +2,11 @@
 
 void *my_memset (void *s, int c, size_t n)
 {
-    unsigned char *unsigned_s = s;
-    while (0 < n)
-    {
-        *unsigned_s = c;
-        unsigned_s++;
-        n--;
+    unsigned char *unsigned_s = (unsigned char*) s;
+    size_t i = 0;
+    while (i < n){
+        unsigned_s[i] = c;
+        i++;
     }
-    return (s);
+    return unsigned_s;
 }
