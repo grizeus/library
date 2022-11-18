@@ -10,9 +10,10 @@
                 "UNICODE",
                 "_UNICODE"
             ],
+            "compilerPath": "C:\\msys64-mingw\\mingw64\\bin\\gdb.exe",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "windows-msvc-x64",
+            "intelliSenseMode": "gcc-x64",
             "configurationProvider": "ms-vscode.makefile-tools"
         }
     ],

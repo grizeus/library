@@ -1,5 +1,7 @@
 *.o
 *.a
+*.sh
 build/
 builds/
 UT/builds/
+.vscode/
