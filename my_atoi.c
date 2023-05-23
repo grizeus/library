@@ -1,5 +1,8 @@
 #include "my_library.h"
 
+/// @brief atoi() - convert a string to an integer
+/// @param my_string - string to be converted
+/// @return integer value of converted string or 0 if conversion fails
 int my_atoi(const char* my_string)
 {
     // atoi() - convert a string to an integer
