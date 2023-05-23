@@ -1,6 +1,7 @@
-# library
-**I hope, I'm doing right)**
+# Library with common c-functions
 
->but seriously, I dunno
-cheez
+## Description
+This library contains common c-functions that are used in many projects.
+
+version: 0.1.1
 
