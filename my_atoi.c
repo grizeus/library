@@ -1,34 +1,34 @@
 #include "my_library.h"
 
-int my_atoi(const char *nptr)
+int my_atoi(const char* my_string)
 {
-    int res = 0, sign = 1, INT_MAX = +214783647, INT_MIN = -2147483648;
-    
-    if (*nptr == '\0'){
+    // atoi() - convert a string to an integer
+    const int INT_MAX = 2147483647;
+    const int INT_MIN = -2147483648;
+    int result = 0, sign = 1;
+    // check for termination
+    if (my_string == '\0')
         return 0;
-    }
-
-    while (*nptr == ' ' || *nptr == '\t')
-        nptr++;
-        
-    if (*nptr == '-'){
+    // skip white spaces and tabs
+    while (*my_string == ' ' || *my_string == '\t' || *my_string == '\n' || *my_string == '\v' || *my_string == '\f' || *my_string == '\r')
+        my_string++;
+    // check for sign
+    if (*my_string == '-')
         sign = -1;
-        nptr++;
-    }
 
-    
-    
-    while (my_isdigit(*nptr) == 1){
-        if (res > INT_MAX / 10)
+    while (my_isdigit(*my_string) == 1)
+    {
+        if (result > INT_MAX / 10 || (result == INT_MAX / 10 && *my_string - '0' > INT_MAX % 10))
         {
             if (sign == 1)
                 return INT_MAX;
             else
                 return INT_MIN;
         }
-        res = res * 10;
-        res += *nptr - '0';
-        nptr++;      
-    } 
-    return res * sign;
+        // convert to integer and add to result
+        result = result * 10 + (*my_string - '0');
+        my_string++;
+    }
+    // return result with right sign
+    return result * sign;
 }
