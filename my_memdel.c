@@ -1,8 +1,10 @@
 #include "my_library.h"
 
-void my_memdel(void **ap){
-    if (*ap && ap){
-        free(*ap);
-        *ap == NULL;
+/// @brief Frees the memory space pointed to by ptr, then sets ptr to NULL.
+/// @param ptr
+void my_memdel(void** ptr) {
+    if (ptr && *ptr) {
+        free(*ptr);
+        *ptr == NULL;
     }
 }
