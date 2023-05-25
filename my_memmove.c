@@ -1,9 +1,9 @@
 #include "my_library.h"
 
 /// @brief Copies n characters from src to dest.
-/// @param dest
-/// @param src
-/// @param n
+/// @param dest pointer to the destination string
+/// @param src pointer to the source string
+/// @param n number of characters to be copied
 /// @return dest pointer to the destination string
 void* my_memmove(void* dest, const void* src, size_t n)
 {
