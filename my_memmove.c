@@ -1,17 +1,26 @@
 #include "my_library.h"
 
-void *my_memmove(void *dest, const void *src, size_t n)
+/// @brief Copies n characters from src to dest.
+/// @param dest
+/// @param src
+/// @param n
+/// @return dest pointer to the destination string
+void* my_memmove(void* dest, const void* src, size_t n)
 {
-    char *my_dest = (char *) dest;
-    char *my_src = (char *) src;
-    char *temp = malloc(sizeof(char) * n);
-
-    for (unsigned int i = 0; i < n; i++)
-            temp[i] = my_src[i];
-
-    for (unsigned int i = 0; i < n; i++)
-            my_dest[i] = temp[i];
+    char* c_dest = (char *) dest;
+    char* c_src = (char *) src;
     
-    free(temp);
-    return my_dest;
+    if (c_dest <= c_src) {
+        // copy from beginning
+        while (n--)
+            *c_dest++ = *c_src++;
+    } else {
+        // copy from end
+        c_dest += n;
+        c_src += n;
+        while (n--)
+            *--c_dest = *--c_src;
+    }
+
+    return dest;
 }
