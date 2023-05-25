@@ -1,10 +1,11 @@
 #include "my_library.h"
 
-// memset() - fill memory with a constant byte
-void *my_memset (void *s, int c, size_t n)
+
+void *my_memset (void *src, int c, size_t n)
 {
-    unsigned char *ptr = s;
-    while (n--)
+    char* ptr = (char *)src;
+    while (n-- && *ptr != '\0')
         *ptr++ = (unsigned char)c;
-    return s;
+    return src;
 }
+// memset() - fill memory with a constant byte

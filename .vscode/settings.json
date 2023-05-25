@@ -1,4 +1,7 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
-    "cmake.sourceDirectory": "${workspaceFolder}/UT"
+    "cmake.sourceDirectory": "${workspaceFolder}/UT",
+    "files.associations": {
+        "algorithm": "c"
+    }
 }

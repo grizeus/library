@@ -11,14 +11,14 @@ void* my_memmove(void* dest, const void* src, size_t n)
     char* c_src = (char *) src;
     
     if (c_dest <= c_src) {
-        // copy from beginning
-        while (n--)
+        // copy from beginning and protect from copying '\0' in the middle of destination memory region
+        while (n-- && (*c_src != '\0'))
             *c_dest++ = *c_src++;
     } else {
-        // copy from end
         c_dest += n;
         c_src += n;
-        while (n--)
+        // copy from end and protect from pointiing to the unaloc memory chunk (case src is pointing to the beginning )
+        while (n-- && (c_src > src))
             *--c_dest = *--c_src;
     }
 
