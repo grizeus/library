@@ -1,13 +1,15 @@
 #include "my_library.h"
 
-size_t my_strlen(const char *s)
-{
-     const char *ptr = s;
+/// @brief Calculates the length of the string pointed to by s, excluding the terminating null byte ('\0').
+/// @param s pointer to the string to be measured
+/// @return the number of bytes (chars) in the string pointed to by s.
+size_t my_strlen(const char* s) {
+   // set pointer to start of string
+   const char *ptr = s;
      
-     while ( *ptr )
-     {
-        ++ptr;
-     }
-     
+   // loop until end of string
+   while ( *ptr )
+      ++ptr;
+   // return the number of char in the string
     return ptr - s;
 }
