@@ -6,23 +6,22 @@
 /// @return pointer to the first occurrence of the substring needle in the string haystack, or NULL if the substring is not found.
 char* my_strstr(const char* haystack, const char* needle) {
 
-    char* sub = needle;
+    char* sub = (char* )needle;
     // empty string is always a substring
     if (*sub == 0)
         return haystack;
 
-    for ( ; *haystack != 0; haystack++)
-    {
+    for ( ; *haystack != 0; haystack++) {
         if (*haystack != *sub)
             continue;
-        char* str = haystack;
+        char* str = (char* )haystack;
         while (1) { // infinite loop
             if (*sub == 0)
-                return haystack;
+                return (char* ) haystack;
             if (*str++ != *sub++)
                 break;
         }   
-        sub = needle;
+        sub = (char* )needle;
     }
     return NULL;
 }
