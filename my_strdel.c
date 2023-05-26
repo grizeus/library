@@ -1,15 +1,11 @@
 #include "my_library.h"
 
-void my_strdel(char **as){
-    if (as && *as){
-		free(*as);
-		*as = NULL;
+/// @brief Frees the memory space pointed to by str, then sets str to NULL.
+/// @param str pointer to the pointer to the string to be freed
+/// @return none
+void my_strdel(char** str){
+    if (str && *str){
+		  free(*str);
+		  *str = NULL;
     }
 }
-
-
-
-
-
-/* Takes as a parameter the address of a string that need to be freed with free(3), then sets its pointer to NULL
-Param#1:    The string's address */
