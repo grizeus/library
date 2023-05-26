@@ -1,13 +1,19 @@
 #include "my_library.h"
 
+/// @brief Lexicographical comparison between s1 and s2 up to n characters or until a '\0' is reached.
+/// If the 2 strings are identical, the function return 1, or 0 otherwise.
+/// @param s1 First string
+/// @param s2 Second string
+/// @param n The maximum number of characters to be compared.
+/// @return 1 if the 2 strings are identical, 0 otherwise.
 int my_strnequ(char const *s1, char const *s2, size_t n){
-    if (!s1 || !s2)
-        return 0;
-    for (size_t i = 0; i < n && s1[i] != '\0' && s2[i] != '\0'; i++){
-        if (s1[i] != s2[i])
-            return 0;
+    while (n > 0 && *s1 && *s2 && (*s1 == *s2)) {
+        s1++;
+        s2++;
+        n--;
     }
-    return 1;
+
+    return (n == 0 || (*s1 == '\0' && *s2 == '\0'));
 }
         
         
