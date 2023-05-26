@@ -8,7 +8,7 @@
 void my_striter(char *str, void (*func)(char*)){
     if (str && func){
         while (*str){
-            func(str);
+            (*func)(str);
             str++;
         } 
     }
