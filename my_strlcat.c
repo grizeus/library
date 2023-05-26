@@ -12,7 +12,7 @@ size_t my_strlcat (char* dst, const char* src, size_t size) {
     size_t append_len = size - dst_len - 1;
     if (append_len > 0) {
         size_t i = 0;
-        for (i; i < append_len && src[i] != '\0'; i++)
+        for (i; i < append_len && (src[i] != '\0'); i++)
             dst[dst_len + i] = src[i];
         dst[dst_len + i] = '\0';
     }
