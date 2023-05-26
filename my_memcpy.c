@@ -8,8 +8,6 @@
 void* my_memcpy(void* dest, const void* src, size_t n) {
     unsigned char* dest1 = (unsigned char *) dest;
     unsigned char* src1 = (unsigned char*) src;
-    if (dest1 == NULL || src1 == NULL)
-        return NULL;
     while (n > 0){
         *dest1 = *src1;
         dest1++;
