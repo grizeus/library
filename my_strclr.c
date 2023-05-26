@@ -1,13 +1,13 @@
 #include "my_library.h"
 
-void my_strclr(char *s)
+/// @brief Sets every character of the string to the value '\0'
+/// @param str string that needs to be cleared
+/// @return none
+void my_strclr(char *str)
 {
-    size_t len = my_strlen(s);
-    my_bzero(s, len);
+    while (*str != '\0') {
+        *str = '\0';
+        str++;
+    }
+
 }
-        
-        
-        
-        
-/* Sets every character of the string to the value '\0'
-Param#1:    The string that needs to be cleared. */

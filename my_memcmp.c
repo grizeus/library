@@ -1,9 +1,9 @@
 #include "my_library.h"
 
 /// @brief Compares the first n bytes of memory area s1 and memory area s2.
-/// @param s1 
-/// @param s2 
-/// @param n 
+/// @param s1 string to be compared
+/// @param s2 string to be compared
+/// @param n bytes to be compared
 /// @return positive if s1 is lexicographically greater than s2, negative if s1 is less than s2, 0 if s1 is equal to s2.
 int my_memcmp(const void *s1, const void *s2, size_t n)
 {
