@@ -1,10 +1,10 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.22)
 
 project(test_program)
 
 file(GLOB src
-        "../*.h"
-        "../*.c"
+        "../include/*.h"
+        "../src/*.c"
         "main.c"
 )
 

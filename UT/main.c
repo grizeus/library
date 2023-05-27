@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../my_library.h"
+#include "../include/my_library.h"
 
 #include <stdlib.h>
 #include <ctype.h>
@@ -24,12 +24,17 @@ int main(void)
     TEST(atoi("13") != my_atoi("133"));
     TEST(atoi(".42") == my_atoi(".42"));
     TEST(atoi("-42") == my_atoi("-42"));
+    printf("ATOI tests: %i reg, %i myne\n", atoi("-42"), my_atoi("-42"));
     TEST(atoi("133  ") == my_atoi("133  "));
+    TEST(atoi("  m1dn1ght") == my_atoi("  m1dn1ght"));
+    printf("ATOI tests: %i reg, %i myne\n", atoi("m1dn1ght"), my_atoi("m1dn1ght"));
     TEST(atoi("  133") == my_atoi("  133"));
     TEST(atoi("133\n") == my_atoi("133\n"));
     TEST(atoi("133\r") == my_atoi("133\r"));
     TEST(atoi("\t133") == my_atoi("\t133"));
     TEST(atoi("10000000000000000000000000") == my_atoi("10000000000000000000000000"));
+    printf("ATOI tests: %i reg, %i myne\n", atoi("10000000000"), my_atoi("10000000000"));
+
     printf("ATOI tests\n");
     
     
