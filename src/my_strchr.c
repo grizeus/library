@@ -7,7 +7,7 @@
 char* my_strchr(const char* str, int c) {
     char c_c = (char) c;
     while (*str != c_c) {
-        if (!*str++)
+        if (!*str)
             return NULL;
         str++;
     }

@@ -24,7 +24,7 @@ int my_atoi(const char* my_string)
     }
     else if (*my_string == '+')
         my_string++;
-    while (my_isdigit(*my_string) == 1) {
+    while (my_isdigit(*my_string) > 1) {
         if (result > INT_MAX / 10 || (result == INT_MAX / 10 && *my_string - '0' > INT_MAX % 10))
         {
             if (sign == 1)

@@ -10,7 +10,7 @@ void my_striteri(char* str, void (*func)(unsigned int, char*)){
     if (str && func){
         while (str[i]){
             (*func)(i, (str + i));
-            str++;
+            i++;
         }
     }
 }
